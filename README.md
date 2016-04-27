@@ -12,5 +12,7 @@
 						-> 不存在, 保存到数据库并返回201
 
 项目构建:
-
+express -e liaoyuan
+npm init
+grunt
 
