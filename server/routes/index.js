@@ -26,7 +26,7 @@ module.exports = function(app) {
         log.debug("longURL",url_.longURL);
         //todo: validate lognURL
       res.writeHead(302, {
-        'Location': "http://"+url_.longURL
+        'Location': url_.longURL
       });
       res.end();
     })

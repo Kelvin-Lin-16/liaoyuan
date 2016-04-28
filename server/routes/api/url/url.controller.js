@@ -24,6 +24,27 @@ exports.findAllURLs = function (req, res) {
         });
 }
 
+function trans() {
+    var char='';
+    for(var i =0;i<5;i++){
+        var index = Math.round( Math.random() * 2);
+        switch (index){
+            case 0:
+                char =char+String.fromCharCode(Math.floor( Math.random() * 26) + "A".charCodeAt(0));
+                break;
+            case 1:
+                char =char+String.fromCharCode(Math.floor( Math.random() * 26) + "a".charCodeAt(0));
+                break;
+            default:
+                log.debug("number",Math.floor((Math.random() * 9)).toString());
+                char =char + Math.floor((Math.random() * 9)).toString();
+                break;
+        }
+    }
+    return char;
+}
+
+
 /**
  *
  * @param req
@@ -38,16 +59,16 @@ exports.createShortenURL = function (req, res) {
         log.error('InvalidParams');
         return res.status(422).send('InvalidParams');
     }
-
+    var shortURL= trans();
     var url = new Url({
         longURL: longUrl,
-        shortURL:longUrl,
+        shortURL:shortURL,
         created: new Date().toISOString()
     });
     url.save(function (err, url_) {
         if(err){
             log.error(err);
         }
-        res.status(200).send('SUC');
+        res.status(200).send(shortURL);
     });
 }

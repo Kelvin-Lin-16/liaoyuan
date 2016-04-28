@@ -19,6 +19,7 @@ app.controller('urlController', function($scope, $http){
         var originalURL = $scope.originalURL;
         $http.post("/api/url/", {'originalURL':originalURL}).success(function(data, status) {
             $scope.load();
+            $scope.newURL = data;
         }).error(function(data, status) {
             alert(status);
         });
