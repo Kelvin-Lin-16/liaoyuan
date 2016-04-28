@@ -29,19 +29,11 @@ exports.findAllURLs = function (req, res) {
  * @param req
  * @param res
  */
-exports.visitURL = function (req, res) {
-
-}
-
-/**
- *
- * @param req
- * @param res
- */
 exports.createShortenURL = function (req, res) {
     //validating fields
     var longUrl = req.body.originalURL;
     log.debug("longUrl", longUrl);
+    //todo:validate url format
     if(_.isEmpty(longUrl)){
         log.error('InvalidParams');
         return res.status(422).send('InvalidParams');

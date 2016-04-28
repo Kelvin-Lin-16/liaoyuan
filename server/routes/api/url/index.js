@@ -7,8 +7,6 @@ var router = express.Router();
 
 router.get('/', controller.findAllURLs);
 
-router.get('/:url', controller.visitURL);
-
 router.post('/', controller.createShortenURL);
 
 module.exports = router;
