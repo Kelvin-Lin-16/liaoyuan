@@ -14,7 +14,7 @@ var all = {
                 stream: process.stdout
             },
             {
-                level: 'error',
+                level: 'debug',
                 path: './server/logs/liaoyuan',
                 period: '1d',
                 count: 90 //Generate daily error logs
