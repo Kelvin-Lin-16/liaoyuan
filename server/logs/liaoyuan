@@ -11,3 +11,10 @@
 {"name":"liaoyuan","hostname":"ip-172-31-46-245","pid":24203,"level":20,"msg":"POST /api/url","time":"2016-04-28T07:22:08.379Z","v":0}
 {"name":"liaoyuan","hostname":"ip-172-31-46-245","pid":24203,"level":20,"msg":"[routes: Body>>] {\"originalURL\":\"http://www.nba.com\"}","time":"2016-04-28T07:22:08.380Z","v":0}
 {"name":"liaoyuan","hostname":"ip-172-31-46-245","pid":24203,"level":20,"msg":"GET /api/url","time":"2016-04-28T07:22:08.532Z","v":0}
+{"name":"liaoyuan","hostname":"Haifengs-Mac-mini.local","pid":15105,"level":30,"msg":"Http server listening on 8000, in development mode","time":"2016-04-28T07:52:53.776Z","v":0}
+{"name":"liaoyuan","hostname":"Haifengs-Mac-mini.local","pid":15105,"level":20,"msg":"GET /","time":"2016-04-28T07:52:56.632Z","v":0}
+{"name":"liaoyuan","hostname":"Haifengs-Mac-mini.local","pid":15116,"level":30,"msg":"Http server listening on 8000, in development mode","time":"2016-04-28T07:55:30.423Z","v":0}
+{"name":"liaoyuan","hostname":"Haifengs-Mac-mini.local","pid":15118,"level":30,"msg":"Http server listening on 8000, in development mode","time":"2016-04-28T07:55:40.445Z","v":0}
+{"name":"liaoyuan","hostname":"Haifengs-Mac-mini.local","pid":15126,"level":30,"msg":"Http server listening on 8000, in development mode","time":"2016-04-28T07:55:59.526Z","v":0}
+{"name":"liaoyuan","hostname":"Haifengs-Mac-mini.local","pid":15126,"level":20,"msg":"GET /","time":"2016-04-28T07:56:02.964Z","v":0}
+{"name":"liaoyuan","hostname":"Haifengs-Mac-mini.local","pid":15126,"level":20,"msg":"GET /api/url","time":"2016-04-28T07:56:03.882Z","v":0}
