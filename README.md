@@ -11,8 +11,8 @@
 						-> 已存在, 页面警告提示
 						-> 不存在, 保存到数据库并返回201
 
-项目构建:
-express -e liaoyuan
-npm init
-grunt
+#####项目构建:
+				express -e liaoyuan
+				npm init
+				grunt
 

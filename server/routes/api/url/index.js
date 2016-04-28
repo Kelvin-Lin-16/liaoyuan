@@ -5,7 +5,7 @@ var express = require('express'),
 
 var router = express.Router();
 
-router.get('/', controller.findAllURL);
+router.get('/', controller.findAllURLs);
 
 router.get('/:url', controller.visitURL);
 

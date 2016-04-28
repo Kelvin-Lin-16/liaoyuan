@@ -10,8 +10,18 @@ var Url = require('./url.model');
  * @param req
  * @param res
  */
-exports.findAllURL = function (req, res) {
+exports.findAllURLs = function (req, res) {
+    Url
+        .find({})
+        .sort({ created: -1 })
+        .exec(function (err, urls) {
+            if (err){
+                log.error(err);
+                return res.status(500).send(err);
+            }
 
+            return res.status(200).send(urls);
+        });
 }
 
 /**
@@ -29,4 +39,23 @@ exports.visitURL = function (req, res) {
  * @param res
  */
 exports.createShortenURL = function (req, res) {
+    //validating fields
+    var longUrl = req.body.originalURL;
+    log.debug("longUrl", longUrl);
+    if(_.isEmpty(longUrl)){
+        log.error('InvalidParams');
+        return res.status(422).send('InvalidParams');
+    }
+
+    var url = new Url({
+        longURL: longUrl,
+        shortURL:longUrl,
+        created: new Date().toISOString()
+    });
+    url.save(function (err, url_) {
+        if(err){
+            log.error(err);
+        }
+        res.status(200).send('SUC');
+    });
 }

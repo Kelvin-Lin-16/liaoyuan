@@ -5,6 +5,7 @@ var log = require('./log');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var config = require('./server/config');
+var mongoose = require('mongoose');
 
 var app = express();
 
@@ -18,6 +19,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+//Connect to mongo db
+mongoose.connect(config.mongo.uri, config.mongo.options);
 
 require('./server/routes')(app);
 

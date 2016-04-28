@@ -10,7 +10,7 @@ var all = {
     log: {
         name: 'liaoyuan',
         streams: [{
-                level: 'info', //error
+                level: 'debug', //error
                 stream: process.stdout
             },
             {
