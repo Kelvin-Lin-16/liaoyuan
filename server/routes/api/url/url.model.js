@@ -5,13 +5,18 @@ var mongoose = require('mongoose'),
 
 var UrlSchema = new Schema({
     longURL: {
-        type: String
+        type: String,
+        lowercase: true,
+        required: true
     },
     shortURL: {
-        type: String
+        type: String,
+        lowercase: true,
+        required: true
     },
     created: {
-        type: Date
+        type: Date,
+        required: true
     }
 });
 
