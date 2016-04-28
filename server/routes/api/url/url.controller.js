@@ -94,7 +94,7 @@ exports.createShortenURL = function(req, res) {
                 log.error(("[url.controller: createShortenURL]", err));
                 return res.status(500).send(err);
             }
-            return res.status(201).send(shortURL);
+            return res.status(201).send(url_.shortURL);
         });
     });
 }
