@@ -11,7 +11,6 @@ var UrlSchema = new Schema({
     },
     shortURL: {
         type: String,
-        lowercase: true,
         required: true
     },
     created: {
