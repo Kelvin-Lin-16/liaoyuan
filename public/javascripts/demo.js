@@ -3,25 +3,24 @@
  */
 var app = angular.module('ShortenURLDemo',[]);
 
-app.run(function($rootScope){});
-
 app.controller('urlController', function($scope, $http){
 
     $scope.load = function(){
         $http.get('/api/url').success(function(data, status) {
+            console.log(data);
             $scope.urls = data;
         }).error(function(data, status) {
-            alert(status);
+            console.log(status,data);
         });
     }
 
     $scope.shorten = function(){
         var originalURL = $scope.originalURL;
-        $http.post("/api/url/", {'originalURL':originalURL}).success(function(data, status) {
+        $http.post("/api/url", {'originalURL':originalURL}).success(function(data, status) {
             $scope.load();
             $scope.newURL = data;
         }).error(function(data, status) {
-            alert(status);
+            console.log(status,data);
         });
     }
 });

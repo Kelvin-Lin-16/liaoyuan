@@ -20,4 +20,15 @@ var UrlSchema = new Schema({
     }
 });
 
+//Remove _id, __v from response
+UrlSchema.set('toJSON', {
+    transform: function(doc, ret, options) {
+        return {
+            longURL:ret.longURL,
+            shortURL:ret.shortURL,
+            created:ret.created
+        };
+    }
+});
+
 module.exports = mongoose.model('Url', UrlSchema);
