@@ -19,7 +19,8 @@
     "serve-favicon": "~2.3.0"
   },
   "devDependencies": {
-    "grunt": "^1.0.1"
+    "grunt": "^1.0.1",
+    "grunt-contrib-uglify": "~1.0.1"
   },
   "description": "This is an assignment project for liaoyuan.io",
   "main": "app.js",
